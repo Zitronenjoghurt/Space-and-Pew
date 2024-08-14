@@ -20,4 +20,5 @@ target/
 tarpaulin-report.html
 
 # Custom
+assets
 .DS_Store

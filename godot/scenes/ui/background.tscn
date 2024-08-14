@@ -1,0 +1,31 @@
+[gd_scene load_steps=18 format=3 uid="uid://c2n0s2tic486l"]
+
+[ext_resource type="Texture2D" uid="uid://drvbxygvwqde4" path="res://assets/backgrounds/background_1.png" id="1_4t63x"]
+[ext_resource type="Script" path="res://scripts/ui/background.gd" id="2_gq8aa"]
+[ext_resource type="Texture2D" uid="uid://cj4f4fr02xh4g" path="res://assets/backgrounds/background_2.png" id="3_0yhh7"]
+[ext_resource type="Texture2D" uid="uid://caxaoc0wq2005" path="res://assets/backgrounds/background_3.png" id="4_6e5bp"]
+[ext_resource type="Texture2D" uid="uid://b1k716sqmox80" path="res://assets/backgrounds/background_4.png" id="5_ve51j"]
+[ext_resource type="Texture2D" uid="uid://pjtuoyicmfwv" path="res://assets/backgrounds/background_5.png" id="6_7jss0"]
+[ext_resource type="Texture2D" uid="uid://dhvi5abrgntan" path="res://assets/backgrounds/background_6.png" id="7_e6m80"]
+[ext_resource type="Texture2D" uid="uid://hvavi7pyo8yl" path="res://assets/backgrounds/background_7.png" id="8_6rudr"]
+[ext_resource type="Texture2D" uid="uid://clhn74boi0imv" path="res://assets/backgrounds/background_8.png" id="9_nfq2e"]
+[ext_resource type="Texture2D" uid="uid://pfwc8n11hqri" path="res://assets/backgrounds/background_9.png" id="10_wbdww"]
+[ext_resource type="Texture2D" uid="uid://d2m2n0xcu4ltb" path="res://assets/backgrounds/background_10.png" id="11_0h7b3"]
+[ext_resource type="Texture2D" uid="uid://da2fwbbd1geoj" path="res://assets/backgrounds/background_11.png" id="12_gejh3"]
+[ext_resource type="Texture2D" uid="uid://c2nyqyn6tqn7" path="res://assets/backgrounds/background_12.png" id="13_1oo06"]
+[ext_resource type="Texture2D" uid="uid://dy3fj76apy0o1" path="res://assets/backgrounds/background_13.png" id="14_xc78u"]
+[ext_resource type="Texture2D" uid="uid://b56wobojfi1s" path="res://assets/backgrounds/background_14.png" id="15_sva45"]
+[ext_resource type="Texture2D" uid="uid://lkhfafy4jav7" path="res://assets/backgrounds/background_15.png" id="16_k7y2j"]
+[ext_resource type="Texture2D" uid="uid://5vcp1vjml0om" path="res://assets/backgrounds/background_16.png" id="17_3abd2"]
+
+[node name="Background" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_4t63x")
+script = ExtResource("2_gq8aa")
+textures = Array[CompressedTexture2D]([ExtResource("1_4t63x"), ExtResource("3_0yhh7"), ExtResource("4_6e5bp"), ExtResource("5_ve51j"), ExtResource("6_7jss0"), ExtResource("7_e6m80"), ExtResource("8_6rudr"), ExtResource("9_nfq2e"), ExtResource("10_wbdww"), ExtResource("11_0h7b3"), ExtResource("12_gejh3"), ExtResource("13_1oo06"), ExtResource("14_xc78u"), ExtResource("15_sva45"), ExtResource("16_k7y2j"), ExtResource("17_3abd2")])

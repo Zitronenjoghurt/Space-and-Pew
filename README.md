@@ -3,3 +3,8 @@
 
 # Space-and-Pew
 My 5th Godot project, a 2D space shooter!
+
+# Assets
+All used assets are freely available:
+- https://gvituri.itch.io/space-shooter
+- https://deep-fold.itch.io/space-background-generator
