@@ -1,0 +1,39 @@
+name: Rust
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          cd rust/main
+          cargo build --verbose
+      - name: Run tests
+        run: |
+          cd rust/main
+          cargo test --verbose
+      - name: Install tarpaulin
+        run: cargo install cargo-tarpaulin
+      - name: Run tarpaulin
+        run: |
+          cd rust/main
+          cargo tarpaulin --out Xml --output-dir ../../
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+          files: ./cobertura.xml
+          flags: unittests
+          verbose: true

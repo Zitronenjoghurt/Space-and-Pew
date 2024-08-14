@@ -1,0 +1,12 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+windows.debug.x86_64 =   "res://../rust/main/target/x86_64-pc-windows-gnu/debug/main.dll"
+windows.release.x86_64 = "res://../rust/main/target/x86_64-pc-windows-gnu/release/main.dll"
+macos.debug =            "res://../rust/main/target/debug/libmain.dylib"
+macos.release =          "res://../rust/main/target/release/libmain.dylib"
+macos.debug.arm64 =      "res://../rust/main/target/debug/libmain.dylib"
+macos.release.arm64 =    "res://../rust/main/target/release/libmain.dylib"
