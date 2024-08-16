@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://boatfbqlkx1pf"]
+[gd_scene load_steps=5 format=3 uid="uid://boatfbqlkx1pf"]
 
 [ext_resource type="PackedScene" uid="uid://c2n0s2tic486l" path="res://scenes/ui/background.tscn" id="1_3bmqe"]
+[ext_resource type="Script" path="res://scripts/ui/title_screen.gd" id="1_lcw6l"]
+[ext_resource type="PackedScene" uid="uid://brm3vluoohnr0" path="res://scenes/ui/main_menu.tscn" id="2_ebrq0"]
+[ext_resource type="PackedScene" uid="uid://cwnjugwlbi2hj" path="res://scenes/game.tscn" id="2_lid5s"]
 
 [node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_lcw6l")
+game_scene = ExtResource("2_lid5s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Background" parent="CanvasLayer" instance=ExtResource("1_3bmqe")]
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("2_ebrq0")]
+unique_name_in_owner = true

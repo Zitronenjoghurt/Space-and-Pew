@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwnjugwlbi2hj"]
+
+[ext_resource type="PackedScene" uid="uid://c2n0s2tic486l" path="res://scenes/ui/background.tscn" id="1_53ebx"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_vv7f8"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_vv7f8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" parent="CanvasLayer" instance=ExtResource("1_53ebx")]

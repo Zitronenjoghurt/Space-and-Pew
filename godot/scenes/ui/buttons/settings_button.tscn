@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://2crb0iobjl7q"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sb6gq"]
+load_path = "res://.godot/imported/SpaceShooterAssetPack_IU.png-dbb8a79552265afe6fc5a76e22f7b1f5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkuqf"]
+atlas = SubResource("CompressedTexture2D_sb6gq")
+region = Rect2(88, 0, 12, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n0pc0"]
+load_path = "res://.godot/imported/SpaceShooterAssetPack_IU.png-dbb8a79552265afe6fc5a76e22f7b1f5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7d66"]
+atlas = SubResource("CompressedTexture2D_n0pc0")
+region = Rect2(112, 0, 12, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dr8qp"]
+load_path = "res://.godot/imported/SpaceShooterAssetPack_IU.png-dbb8a79552265afe6fc5a76e22f7b1f5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk52r"]
+atlas = SubResource("CompressedTexture2D_dr8qp")
+region = Rect2(100, 0, 12, 13)
+
+[node name="SettingsButton" type="TextureButton"]
+custom_minimum_size = Vector2(64, 64)
+texture_normal = SubResource("AtlasTexture_kkuqf")
+texture_pressed = SubResource("AtlasTexture_c7d66")
+texture_hover = SubResource("AtlasTexture_tk52r")
+ignore_texture_size = true
+stretch_mode = 0

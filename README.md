@@ -8,3 +8,4 @@ My 5th Godot project, a 2D space shooter!
 All used assets are freely available:
 - https://gvituri.itch.io/space-shooter
 - https://deep-fold.itch.io/space-background-generator
+- https://norma-2d.itch.io/celestial-objects-pixel-art-pack

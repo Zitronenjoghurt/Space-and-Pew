@@ -1,12 +1,15 @@
 use godot::prelude::*;
 
-use crate::{config::Config, global_state::GlobalState, traits::serde::FromJsonString};
+use crate::{
+    config::Config, game_state::GameState, global_state::GlobalState, traits::serde::FromJsonString,
+};
 
 #[derive(GodotClass, Debug, Clone, Default)]
 #[class(no_init)]
 pub struct LogicInterface {
-    global_state: GlobalState,
     config: Config,
+    game_state: Option<GameState>,
+    global_state: GlobalState,
 }
 
 #[godot_api]
@@ -16,11 +19,18 @@ impl LogicInterface {
         Gd::from_object(LogicInterface::new(global_state_json))
     }
 
+    #[func]
+    fn load_game(&mut self, game_state_json: String) {
+        let game_state = GameState::from_json_string(&game_state_json);
+        self.game_state = Some(game_state)
+    }
+
     pub fn new(global_state_json: String) -> LogicInterface {
-        let mut interface = LogicInterface::default();
-        interface.global_state = GlobalState::from_json_string(&global_state_json);
-        interface.config = Config::load();
-        interface
+        LogicInterface {
+            global_state: GlobalState::from_json_string(&global_state_json),
+            config: Config::load(),
+            ..Default::default()
+        }
     }
 }
 
