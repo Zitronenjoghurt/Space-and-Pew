@@ -23,17 +23,17 @@ jobs:
         run: |
           cd rust/main
           cargo test --verbose
-      - name: Install tarpaulin
-        run: cargo install cargo-tarpaulin
-      - name: Run tarpaulin
-        run: |
-          cd rust/main
-          cargo tarpaulin --out Xml --output-dir ../../
-      - name: Upload to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          fail_ci_if_error: true
-          files: ./cobertura.xml
-          flags: unittests
-          verbose: true
+      #- name: Install tarpaulin
+      #  run: cargo install cargo-tarpaulin
+      #- name: Run tarpaulin
+      #  run: |
+      #    cd rust/main
+      #    cargo tarpaulin --out Xml --output-dir ../../
+      #- name: Upload to Codecov
+      #  uses: codecov/codecov-action@v4
+      #  with:
+      #    token: ${{ secrets.CODECOV_TOKEN }}
+      #    fail_ci_if_error: true
+      #    files: ./cobertura.xml
+      #    flags: unittests
+      #    verbose: true

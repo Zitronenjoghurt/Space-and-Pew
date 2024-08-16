@@ -8,4 +8,4 @@ func _ready() -> void:
 	main_menu.play_pressed.connect(_on_play_pressed)
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_packed(game_scene)
+	GameManager.load_game()

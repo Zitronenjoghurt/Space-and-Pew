@@ -1,6 +1,8 @@
 use godot::prelude::*;
 use serde_repr::{Deserialize_repr, Serialize_repr};
 
+/// Currently limited to 64 (0-63).
+/// Its value has to be storable in a u64 bitvector.
 #[derive(
     GodotConvert,
     Var,
@@ -15,8 +17,8 @@ use serde_repr::{Deserialize_repr, Serialize_repr};
     PartialOrd,
     Ord,
 )]
-#[repr(u32)]
-#[godot(via = u32)]
+#[repr(u8)]
+#[godot(via = u8)]
 pub enum PlayerShipType {
     WhiteWing = 0,
     GoldenHawk = 1,
