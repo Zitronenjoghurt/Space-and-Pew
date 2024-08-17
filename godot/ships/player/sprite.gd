@@ -8,6 +8,7 @@ var regular_texture: AtlasTexture
 var strafe_left_texture: AtlasTexture
 var strafe_right_texture: AtlasTexture
 
+const INITIAL_ROTATION_DEGREES: int = 90
 const SPRITE_SIZE: Vector2i = Vector2i(8, 8)
 var strafe_left_x: int = 0
 var regular_pos_x: int = SPRITE_SIZE.x
@@ -17,6 +18,8 @@ func _init(_ship_index: int) -> void:
 	ship_index = _ship_index
 
 func _ready() -> void:
+	rotation_degrees = INITIAL_ROTATION_DEGREES
+	
 	var regular_coords: Vector2i = Vector2i(regular_pos_x, ship_index * SPRITE_SIZE.y)
 	var strafe_left_coords: Vector2i = Vector2i(strafe_left_x, ship_index * SPRITE_SIZE.y)
 	var strafe_right_coords: Vector2i = Vector2i(strafe_right_x, ship_index * SPRITE_SIZE.y)

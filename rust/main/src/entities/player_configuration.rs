@@ -9,4 +9,12 @@ use crate::enums::player_ship_type::PlayerShipType;
 pub struct PlayerConfiguration {
     #[export]
     ship_type: PlayerShipType,
+    #[export]
+    acceleration: u32,
+    #[export]
+    rotation_speed: u32,
+    #[export]
+    max_speed: u32,
+    #[export]
+    drag_factor: f32,
 }

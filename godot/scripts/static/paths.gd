@@ -4,3 +4,4 @@ extends Object
 const GAME_SCENE: String = "res://scenes/game.tscn"
 const GLOBAL_STATE: String = "user://global_state.save"
 const PLAYER_SHIP_SPRITESHEET: String = "res://assets/spritesheets/player_ships.png"
+const PLAYER_STATE_MACHINE: String = "res://ships/player/state_machine.tscn"
