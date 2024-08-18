@@ -2,6 +2,7 @@ use godot::prelude::*;
 use serde::{Deserialize, Serialize};
 
 use crate::{
+    entities::unlocked_weapons::{UnlockedWeapons, WeaponUpgrades},
     structures::bitvector::BitVector,
     traits::{
         serde::{FromJsonString, ToJsonString},
@@ -18,6 +19,8 @@ pub struct GameState {
     file_index: u32,
     #[serde(default)]
     unlocked_ships: BitVector,
+    #[serde(default)]
+    weapons: UnlockedWeapons,
 }
 
 #[godot_api]
@@ -65,5 +68,15 @@ impl GameState {
             return;
         }
         self.unlocked_ships.set(ship_type)
+    }
+
+    #[func]
+    fn unlock_weapon(&mut self, weapon_id: u32) {
+        self.weapons.unlock_weapon(weapon_id);
+    }
+
+    #[func]
+    fn get_weapon_upgrades(&self, weapon_id: u32) -> Gd<WeaponUpgrades> {
+        Gd::from_object(self.weapons.get_upgrades(weapon_id))
     }
 }

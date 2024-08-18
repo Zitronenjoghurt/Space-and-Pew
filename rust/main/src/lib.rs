@@ -10,6 +10,7 @@ pub mod global_state;
 
 pub mod entities {
     pub mod player_configuration;
+    pub mod unlocked_weapons;
 }
 
 pub mod enums {
