@@ -1,0 +1,134 @@
+[gd_scene load_steps=19 format=3 uid="uid://dkw4x0k416802"]
+
+[ext_resource type="FontFile" uid="uid://ckh8x3lcgu0or" path="res://assets/fonts/Cyberphont 3.0 B.ttf" id="1_q23wm"]
+[ext_resource type="Texture2D" uid="uid://bfnirkdmjdw5t" path="res://assets/cyber-buttons/blue/reflection sprite sheet.png" id="2_5is0j"]
+[ext_resource type="Script" path="res://scripts/ui/cyber_button.gd" id="2_i014n"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gr0uw"]
+load_path = "res://.godot/imported/menu_button01.png-c5c641021b400ff2ea78ce99b83c92a5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twqvu"]
+atlas = SubResource("CompressedTexture2D_gr0uw")
+region = Rect2(1, 1, 83, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ma654"]
+load_path = "res://.godot/imported/menu_button01.png-c5c641021b400ff2ea78ce99b83c92a5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ohlj"]
+atlas = SubResource("CompressedTexture2D_ma654")
+region = Rect2(87, 1, 83, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r4vgr"]
+font = ExtResource("1_q23wm")
+font_size = 12
+font_color = Color(0.2, 0.815686, 0.858824, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eplrq"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(0, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erpwk"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(91, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsmxp"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(182, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swpuc"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(273, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enuqr"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(364, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l86g3"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(455, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qbif"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(546, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kne6d"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(637, 0, 91, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ra87"]
+atlas = ExtResource("2_5is0j")
+region = Rect2(728, 0, 91, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q8egc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eplrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_erpwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsmxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swpuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enuqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l86g3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qbif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kne6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ra87")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"woosh",
+"speed": 12.0
+}]
+
+[node name="CyberButton" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_twqvu")
+texture_pressed = SubResource("AtlasTexture_4ohlj")
+script = ExtResource("2_i014n")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_r4vgr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReflectionSprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(41.5, 7)
+sprite_frames = SubResource("SpriteFrames_q8egc")
+animation = &"woosh"
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

@@ -15,3 +15,6 @@ game_scene = ExtResource("2_lid5s")
 
 [node name="MainMenu" parent="CanvasLayer" instance=ExtResource("2_ebrq0")]
 unique_name_in_owner = true
+scale = Vector2(1.75, 1.75)
+size_flags_horizontal = 6
+size_flags_vertical = 6
