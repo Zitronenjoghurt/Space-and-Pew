@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerShipData" load_steps=3 format=3 uid="uid://ib3g37jubvd3"]
+
+[ext_resource type="Script" path="res://ship/player/data.gd" id="1_jsgmm"]
+[ext_resource type="Script" path="res://upgrade/ship_base.gd" id="2_vqgv6"]
+
+[resource]
+script = ExtResource("1_jsgmm")
+ship_id = 0
+display_name = "White Wing"
+upgrades = Array[ExtResource("2_vqgv6")]([])
+acceleration = 75
+max_speed = 200
+rotation_speed = 4
+drag_factor = 0.8

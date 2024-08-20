@@ -9,12 +9,8 @@ pub mod game_state;
 pub mod global_state;
 
 pub mod entities {
-    pub mod player_configuration;
+    pub mod unlocked_ships;
     pub mod unlocked_weapons;
-}
-
-pub mod enums {
-    pub mod player_ship_type;
 }
 
 pub mod structures {

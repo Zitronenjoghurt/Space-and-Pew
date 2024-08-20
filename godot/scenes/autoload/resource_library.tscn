@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://crrxucj03fn1h"]
+
+[ext_resource type="Script" path="res://scripts/autoload/resource_library.gd" id="1_epxg1"]
+[ext_resource type="Script" path="res://ship/data.gd" id="2_la6p0"]
+[ext_resource type="Resource" uid="uid://ib3g37jubvd3" path="res://ship/player/ships/white_wing.tres" id="3_0rf6c"]
+
+[node name="ResourceLibrary" type="Node"]
+script = ExtResource("1_epxg1")
+ship_resources = Array[ExtResource("2_la6p0")]([ExtResource("3_0rf6c")])

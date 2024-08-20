@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3ys54j5jmf71"]
 
 [ext_resource type="Script" path="res://scripts/state_machine/fsm.gd" id="1_kv3eb"]
-[ext_resource type="Script" path="res://ships/player/states/fly.gd" id="2_ea8ff"]
+[ext_resource type="Script" path="res://ship/player/states/fly.gd" id="2_ea8ff"]
 
 [node name="StateMachine" type="Node" node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_kv3eb")

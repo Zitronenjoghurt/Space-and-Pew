@@ -1,26 +1,23 @@
 class_name Player
 extends Ship
 
+enum ID {
+	WhiteWing = 0,
+}
+
 var state_machine_scene: PackedScene = load(Paths.PLAYER_STATE_MACHINE)
-var config: PlayerConfiguration
 var ship_sprite: PlayerSprite
 @onready var screen_size: Vector2 = get_viewport_rect().size
 
-func _init(configuration: PlayerConfiguration) -> void:
-	config = configuration
-	# Values for testing, will be moved later
-	config.acceleration = 75
-	config.max_speed = 200
-	config.rotation_speed = 4
-	config.drag_factor = 0.8
+func _init(_data: PlayerShipData) -> void:
+	super._init(_data)
 
 func _ready() -> void:
 	_load_ship_sprite()
 	_load_state_machine()
-	apply_player_config(config)
 
 func _load_ship_sprite() -> void:
-	ship_sprite = PlayerSprite.new(config.ship_type)
+	ship_sprite = PlayerSprite.new(data.ship_id)
 	add_child(ship_sprite)
 
 func _load_state_machine() -> void:

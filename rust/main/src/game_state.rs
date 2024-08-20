@@ -2,7 +2,10 @@ use godot::prelude::*;
 use serde::{Deserialize, Serialize};
 
 use crate::{
-    entities::unlocked_weapons::{UnlockedWeapons, WeaponUpgrades},
+    entities::{
+        unlocked_ships::UnlockedShips,
+        unlocked_weapons::{UnlockedWeapons, WeaponUpgrades},
+    },
     structures::bitvector::BitVector,
     traits::{
         serde::{FromJsonString, ToJsonString},
@@ -21,6 +24,8 @@ pub struct GameState {
     unlocked_ships: BitVector,
     #[serde(default)]
     weapons: UnlockedWeapons,
+    #[serde(default)]
+    ships: UnlockedShips,
 }
 
 #[godot_api]

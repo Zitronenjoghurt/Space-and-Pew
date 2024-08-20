@@ -23,4 +23,5 @@ func _load_game_state(file_index: int) -> void:
 		
 func load_game(file_index: int = 0):
 	_load_game_state(file_index)
+	SaveManager.save_game_state(game_state)
 	get_tree().change_scene_to_packed(game_scene)
