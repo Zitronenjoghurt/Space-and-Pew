@@ -1,6 +1,5 @@
 extends Node
 
-var game_scene: PackedScene = load(Paths.GAME_SCENE)
 var global_state: GlobalState
 var game_state: GameState
 
@@ -21,7 +20,6 @@ func _load_game_state(file_index: int) -> void:
 	else:
 		game_state = GameState.create_new(Config.GAME_VERSION, file_index)
 		
-func load_game(file_index: int = 0):
+func load_game(file_index: int):
 	_load_game_state(file_index)
-	SaveManager.save_game_state(game_state)
-	get_tree().change_scene_to_packed(game_scene)
+	get_tree().change_scene_to_packed(MainScenes.GAME_MENU)

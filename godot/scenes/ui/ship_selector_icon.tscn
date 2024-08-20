@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://pq7nuvvufvvi"]
+
+[ext_resource type="Texture2D" uid="uid://6uiwgctnqk2d" path="res://assets/spritesheets/player_ships.png" id="1_d67p4"]
+[ext_resource type="Script" path="res://scripts/ui/ship_selector_icon.gd" id="1_ermj2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p848f"]
+atlas = ExtResource("1_d67p4")
+region = Rect2(8, 0, 8, 8)
+
+[node name="ShipSelectorIcon" type="Area2D"]
+position = Vector2(127.11, 111.77)
+rotation = 0.706858
+scale = Vector2(10, 10)
+script = ExtResource("1_ermj2")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = SubResource("AtlasTexture_p848f")
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1.02765, -3.95787, 1.03328, -4.00846, 1.03165, -3.08651, 2.01855, -3.00884, 2.01692, -2.08689, 3.00381, -2.00922, 2.99109, -0.946279, 3.98908, -1.00959, 4.02368, 3.95818, 3.02569, 4.0215, 3.03842, 2.95856, 2.04042, 3.02187, 1.97711, 2.02388, 1.05515, 2.02225, 1.04243, 3.08519, -1.00741, 2.99479, -1.00578, 2.07284, -1.99267, 1.99517, -2.0054, 3.05811, -2.92735, 3.05648, -3.00502, 4.04337, -4.06796, 4.03065, -4.02652, -1.00207, -3.10457, -1.00044, -3.0269, -1.98734, -1.96396, -1.97461, -2.02728, -2.97261, -1.02928, -3.03592)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

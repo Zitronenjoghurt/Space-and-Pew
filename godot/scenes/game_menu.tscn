@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://sjtdh1l4miy"]
+
+[ext_resource type="Script" path="res://scripts/game_menu.gd" id="1_wyq8p"]
+[ext_resource type="PackedScene" uid="uid://c2n0s2tic486l" path="res://scenes/ui/background.tscn" id="2_ka28p"]
+[ext_resource type="PackedScene" uid="uid://bksj71wgb034" path="res://scenes/ui/ship_selector.tscn" id="3_jss4v"]
+
+[node name="GameMenu" type="Node2D"]
+script = ExtResource("1_wyq8p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" parent="CanvasLayer" instance=ExtResource("2_ka28p")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="ShipSelector" parent="CanvasLayer" instance=ExtResource("3_jss4v")]
+unique_name_in_owner = true
